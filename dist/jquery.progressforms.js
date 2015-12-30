@@ -270,8 +270,16 @@
 			}
 		}
 
-		if (!notFilled && typeof settings.validateRequiredFunctions[currentTab] == 'function') {
-			notFilled = settings.validateRequiredFunctions[currentTab](fieldset);
+		if (!notFilled) {
+			if (typeof settings.validateRequiredFunctions === 'object') {
+				if (settings.validateRequiredFunctions.length &&
+						typeof settings.validateRequiredFunctions[currentIndex] === 'function') {
+					// It is an array.. This is included to preserve the old style of validation functions
+					notFilled = settings.validateRequiredFunctions[currentIndex](fieldset);
+				} else if (typeof settings.validateRequiredFunctions[currentTab] === 'function') {
+					notFilled = settings.validateRequiredFunctions[currentTab](fieldset);
+				}
+			}
 		}
 
 		return notFilled;
