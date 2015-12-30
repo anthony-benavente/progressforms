@@ -264,7 +264,7 @@
 					}
 
 					if (!checked && checkboxes.length > 0) {
-						notFilled = $(checkboxes[0]);
+						notFilled = $(checkboxes);
 					}
 				}
 			}
