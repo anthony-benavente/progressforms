@@ -43,6 +43,13 @@ And then to initialize the plug-in on an element, simply run the following:
 ```
 
 #### Methods
+To call methods, you must use the .progressforms() method while passing in the name of the method
+followed by the required parameters. Example:
+
+    $('#progressforms-wrapper').progressforms('goToTab', 3);
+    
+This method call jumps to the tab with index 3 (the fourth tab).
+
 This plugin has two methods that can be used to jump to specific tabs based on index or their container IDs. They 
 are listed and described below:
 
@@ -51,10 +58,16 @@ Parameters:
   1. index (Number) - This paramter is the index in the fieldset in the range [0, n) where n is the number of tabs
   in the form. If this is invalid or out of bounds, the plugin will throw an exception.
   
-**function goToTabById(id)**
+**function goToTabById(id)**  
 Parameters:
   1. id (String) - This parameter is the id of the container for the page in the form. If the id doesn't exist, the
   plugin will throws an exception.
+  
+Example:
+
+    $('#progressforms-wrapper').progressforms('goToTabById', '#confirm');
+
+Assuming that there is a page in the form with the id `#confirm`, the form will jump to that page. 
 
 ### Options
 **clickForward**  
