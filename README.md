@@ -174,6 +174,11 @@ This method is used when creating the next button used for moving to the next pa
 **createPrevButton** `function() { }`  
 This method is used when creating the previous button used for moving back pages in the form.
 
+**progressBarTarget**  
+Type: `String`  Default: `''`  
+This indicates to the plugin where to append the generated progress bar to. If this is left as '', 
+it will be appended to the top of the container for which the plugin in was invoked on.
+
 ### Required Fields
 Progressforms automatically validates that all fields that have the required attribute are actually filled out before continuing to the next tab. This can also be set up to work for check boxes where a minimum amount need to be checked. In order for this to work, the check boxes need to be wrapped in a containing element with the attribute `data-required` on it. The attribute can also have a value to specify how many check boxes must be checked in order for the requirement to be satisfied. Below is an example of how to set up a check box group.
 
