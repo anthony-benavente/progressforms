@@ -1,5 +1,5 @@
 /*
- *  progressforms - v1.0.1
+ *  progressforms - v1.0.2
  *  JQuery plugin that splits a form into multiple steps with a progress bar
  *  https://github.com/anthony-benavente/progressforms.git
  *
