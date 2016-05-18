@@ -235,7 +235,7 @@
 
 		for (i = 0; i < requiredFields.length && notFilled === undefined; i++) {
 			if ($(requiredFields[i]).is(':visible') &&
-				!$(requiredFields[i]).css('visibility') === 'visible' && 
+				$(requiredFields[i]).css('visibility') !== 'hidden' && 
 				$(requiredFields[i]).val() === '') {
 				notFilled = $(requiredFields[i]);
 			}
