@@ -1,5 +1,5 @@
 /*
- *  progressforms - v1.0.2
+ *  progressforms - v1.0.3
  *  JQuery plugin that splits a form into multiple steps with a progress bar
  *  https://github.com/anthony-benavente/progressforms.git
  *
@@ -131,7 +131,7 @@
 	function generateProgressBar() {
 		var progressBar = $('<ul class="progressBar"></ul>');
 		var onProgressItemClick = function() {
-			var listItems = container.find('.progressBar li');
+			var listItems = $('.progressBar li');
 			for (var i = 0; i < listItems.length; i++) {
 				if (listItems[i] === this) {
 					if (i > currentIndex && settings.clickForward) {
@@ -242,7 +242,9 @@
 		var i = 0;
 
 		for (i = 0; i < requiredFields.length && notFilled === undefined; i++) {
-			if ($(requiredFields[i]).is(':visible') && $(requiredFields[i]).val() === '') {
+			if ($(requiredFields[i]).is(':visible') &&
+				!$(requiredFields[i]).css('visibility') === 'visible' && 
+				$(requiredFields[i]).val() === '') {
 				notFilled = $(requiredFields[i]);
 			}
 		}
