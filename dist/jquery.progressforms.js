@@ -1,5 +1,5 @@
 /*
- *  progressforms - v1.0.3
+ *  progressforms - v1.0.4
  *  JQuery plugin that splits a form into multiple steps with a progress bar
  *  https://github.com/anthony-benavente/progressforms.git
  *
@@ -136,11 +136,14 @@
 				if (listItems[i] === this) {
 					if (i > currentIndex && settings.clickForward) {
 						if (settings.clickVisitedOnly &&  $(fieldsets[i]).data('previously-validated')) {
+							settings.callbacks.onProgressClicked(this, fieldsets[i]);
 							methods.goToTab(i);
 						} else if (!settings.clickVisitedOnly) {
+							settings.callbacks.onProgressClicked(this, fieldsets[i]);
 							methods.goToTab(i);
 						}
 					} else if (i < currentIndex && settings.clickBack) {
+						settings.callbacks.onProgressClicked(this, fieldsets[i]);
 						methods.goToTab(i);
 					}
 					break;
@@ -399,6 +402,7 @@
 			onInit: function() {},
 			onNext: function(tabClicked, tabEntered) {},
 			onPrev: function(tabClicked, tabEntered) {},
+			onProgressClicked: function(id, targetFieldset) {},
 			onLastTabEntered: function() {},
 			onValidateRequiredFailed: function(notFilled) {
 				alert("Please fill out all required fields!");

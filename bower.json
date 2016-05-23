@@ -1,6 +1,6 @@
 {
   "name": "progressforms",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "JQuery plugin that splits a form into multiple steps with a progress bar",
   "main": [
     "src/jquery.progresforms.js"

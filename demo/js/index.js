@@ -19,6 +19,15 @@ $(function() {
 				notFilled.focus();
 			},
 			onLastTabEntered: function() {
+			},
+			onNext: function(a, b) {
+				console.log("We just nexted: ");
+				console.log(a);
+				console.log(b);
+			},
+			onProgressClicked: function(li, target) {
+				console.log("Clicked on " + $(li).html());
+				console.log($(target).attr('id'));
 			}
 		},
         ui: {
