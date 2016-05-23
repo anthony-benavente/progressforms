@@ -138,6 +138,13 @@ This function is called whenever the next button is pressed.
 `tabClicked` - This is a JQuery element that is the tab that the form was on just before the next button was pressed  
 `tabEntered` - This is a JQuery element that is the tab that the form moved to just after the next button was pressed  
 
+**onProgressClicked** `function(li, targetFieldset)`  
+This function is called when the progress bar is clicked. You can use this if you have to submit then jump to a specified
+tab.  
+`li` - This is the li that was clicked. Using `$(li).html()`, you can get the text displayed in the li.  
+`targetFieldset` - This is the fieldset that the li is associated with. You probably would want the id attribute from this 
+to jump to it.
+
 **onPrev**  
 This function is called whenever the previous button is pressed.  
 `tabClicked` - This is a JQuery element that is the tab that the form was on just before the previous button was pressed  
