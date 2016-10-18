@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,800);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
 
 * {
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -123,4 +124,18 @@ label.full {
     margin: 0 5px;
 
     color: #333;
+}
+
+.progressBar li:before {
+    font-family: Montserrat, arial, sans-serif;
+}
+.progressBar li.completed:before {
+    font-family: FontAwesome !important;
+
+    content: '\f00c' !important;
+}
+.progressBar li.active:before,
+.progressBar li.active:after {
+    color: white;
+    background: #c00;
 }
