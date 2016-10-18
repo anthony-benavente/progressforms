@@ -28,9 +28,10 @@ In order to initialize progressforms, you must call the function on an element t
 </div>
 ```
 
-And then to make initialize the function, you need to be sure to have JQuery on the page as well as the script for this plug in like so:
+And then to initialize the plugin, you need to be sure to have JQuery on the page, the script for this plugin, and the CSS file for styling like so:
 
 ```html
+<link rel="stylesheet" href="path/to/progressforms.css">
 <script src="path/to/jquery.js"></script>
 <script src="path/to/jquery.progressforms.js"></script>
 ```
