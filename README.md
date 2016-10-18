@@ -4,6 +4,8 @@ progressforms
 This JQuery plugin utilizes the tutorial for a multi-step JQuery form
 with a progress bar found [here](http://codepen.io/atakan/pen/gqbIz).
 
+![Progressforms in action](http://agora.cs.wcu.edu/~ambenavente1/res/images/progressforms.png)
+
 ### How to Use
 
 #### Initialization
